@@ -130,8 +130,8 @@ module Theine
     end
 
     def rails_reload!
-      ActionDispatch::Reloader.cleanup!
-      ActionDispatch::Reloader.prepare!
+      ActiveSupport::Reloader.reset_callbacks :prepare
+      #ActionDispatch::Reloader.prepare!
     end
 
     def start_service
