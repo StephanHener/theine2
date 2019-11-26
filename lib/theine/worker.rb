@@ -130,7 +130,13 @@ module Theine
     end
 
     def rails_reload!
-      ActiveSupport::Reloader.reset_callbacks :prepare
+      if Rails.version.to_f >= 5.1
+        Rails.application.reloader.reload!
+        Rails.application.reloader.prepare!
+      else
+        ActionDispatch::Reloader.cleanup!
+        ActionDispatch::Reloader.prepare!
+      end  
     end
 
     def start_service
