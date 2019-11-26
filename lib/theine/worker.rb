@@ -116,7 +116,7 @@ module Theine
 
     def argv_to_s
       ARGV.map { |arg|
-        if arg.include?(" ")
+        if !arg.nil? && arg.include?(" ")
           "\"#{arg}\""
         else
           arg
