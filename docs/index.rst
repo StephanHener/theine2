@@ -96,10 +96,10 @@ to run the client, which will make the Theine client start much faster.
 If you have any problems in this mode, please revert back to using the same
 Ruby for the client.
 
-Tell Theine to use Ruby MRI for the client
+Tell Theine to use CRuby for the client
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Figure out where your Ruby 1.9 or 2.0 binary is::
+Figure out where your Ruby 2.6.5 binary is::
 
   $ rvm ruby-2.6.5 do which ruby
   /Users/mrbrdo/.rvm/rubies/ruby-2.6.5-p114/bin/ruby
