@@ -65,6 +65,7 @@ Example ``.theine file`` (YAML)::
   max_port: 11100
   min_free_workers: 2
   spawn_parallel: true
+  silent: true
 
 base_port and max_port
 ~~~~~~~~~~~~~~~~~~~~~~
@@ -87,6 +88,13 @@ When set to `false`, it will start one worker first, and when it is loaded,
 it will start the next worker. When `false`, the first worker should start
 just a little bit faster. If you have a high number of min_free_workers then
 I recommend setting this to `false`.
+
+silent
+~~~~~~~~~~~~~~
+When set to `true`, Theine will start in silent mode. This mode gives no output
+to the shell and is perferct for using `thiene_server &` for a detached process.
+This is especially helpful in docker environments when you cannot have multiple
+shells open without tmux. recommend `false` for non docker workflows.
 
 Speed up Theine
 ---------------
