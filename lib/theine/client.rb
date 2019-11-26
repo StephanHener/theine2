@@ -40,6 +40,8 @@ module Theine
         @worker.command_rake(argv)
       when "rspec"
         @worker.command_rspec(argv)
+      when 'cucumber'
+        @worker.command_cucumber(argv)
       else
         @worker.command_rails([command] + argv)
       end
