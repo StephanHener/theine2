@@ -41,7 +41,7 @@ module Theine
         require 'rspec/core'
         RSpec::Core::Runner.autorun
       },
-      cucumber: proc{
+      cucumber: proc {
         change_rails_env_to("test")
         require 'active_support/descendants_tracker'
         require 'cucumber/rspec/disable_option_parser'
@@ -49,6 +49,7 @@ module Theine
         cucumber_runtime = Cucumber::Runtime.new
         cucumber_main = Cucumber::Cli::Main.new(ARGV.dup)
         cucumber_main.execute!(cucumber_runtime)
+      }
     }
 
     def initialize(port, balancer)
