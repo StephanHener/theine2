@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    theine (0.0.18)
+    theine2 (1.0.0)
 
 GEM
   remote: http://rubygems.org/
@@ -12,7 +12,7 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
-  theine!
+  theine2!
 
 BUNDLED WITH
    2.0.2
