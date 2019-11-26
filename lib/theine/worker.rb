@@ -131,7 +131,6 @@ module Theine
 
     def rails_reload!
       ActiveSupport::Reloader.reset_callbacks :prepare
-      #ActionDispatch::Reloader.prepare!
     end
 
     def start_service
