@@ -9,4 +9,4 @@ that they use `fork` which doesn't work on JRuby.
   time theine runner "puts Rails.env"
   0.12s  user 0.02s system 32%  cpu 0.449  total  # Theine
 
-Docs https://theine2.readthedocs.io/en/latest/
+Docs https://theine2.readthedocs.io/en/latest
