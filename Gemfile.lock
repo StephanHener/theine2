@@ -1,19 +1,11 @@
 PATH
   remote: .
   specs:
-    theine (0.0.17)
-      pry
+    theine (0.0.18)
 
 GEM
   remote: http://rubygems.org/
   specs:
-    coderay (1.0.9)
-    method_source (0.8.2)
-    pry (0.9.12.2)
-      coderay (~> 1.0.5)
-      method_source (~> 0.8)
-      slop (~> 3.4)
-    slop (3.4.6)
 
 PLATFORMS
   java
@@ -21,3 +13,6 @@ PLATFORMS
 
 DEPENDENCIES
   theine!
+
+BUNDLED WITH
+   2.0.2
