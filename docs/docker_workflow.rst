@@ -33,7 +33,7 @@ Setup
    ``echo "silent: true" > .theine``
  - To use Theine you want to run bash on your web service. ``docker-compose
    run web bash``
- - Run the theine server `thiene_server &` - This creates a detached
+ - Run the theine server ``thiene_server &`` - This creates a detached
    theine_server
  - You'll be running all your rails commands from this bash console
 
@@ -48,21 +48,21 @@ Start `using <https://theine2.readthedocs.io/en/latest/#using>`_ Theine
 
 Sample Performance
 ------------------
-`time theine routes` - cruby Client::
+``time theine routes`` - CRuby Client
   | real    0m1.854s
   | user    1m25.364s
   | sys     0m9.491s
 
 **vs**
 
-`time theine routes` - jruby Client::
+``time theine routes`` - JRuby Client
   | real    0m7.702s
   | user    1m49.563s
   | sys     0m10.085s
 
 **vs**
 
-`time rails routes` - native jruby no theine::
+``time rails routes`` - native JRuby
   | real    0m24.904s
   | user    1m25.817s
   | sys     0m6.146s
