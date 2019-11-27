@@ -92,7 +92,7 @@ I recommend setting this to `false`.
 silent
 ~~~~~~~~~~~~~~
 When set to `true`, Theine will start in silent mode. This mode gives no output
-to the shell and is perferct for using `thiene_server &` for a detached process.
+to the shell and is perfect for using `thiene_server &` for a detached process.
 This is especially helpful in docker environments when you cannot have multiple
 shells open without tmux. recommend `false` for non docker workflows.
 
@@ -136,6 +136,10 @@ doing that, since theine needs to spawn a process for each command anyway, so
 there is no benefit in comparison to just running the command (like rails
 server)
 directly.
+
+Using with Docker
+-----------------
+See :ref:`docker_workflow`
 
 How it works
 ------------
