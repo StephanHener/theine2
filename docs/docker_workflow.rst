@@ -33,9 +33,10 @@ Setup
    ``echo "silent: true" > .theine``
  - To use Theine you want to run bash on your web service. ``docker-compose
    run web bash``
- - Run the theine server ``thiene_server &`` - This creates a detached
+ - Run the theine server ``thiene_start`` - This creates a detached
    theine_server
  - You'll be running all your rails commands from this bash console
+ - You can stop the theine server with ``thiene_stop``
 
 Start `using <https://theine2.readthedocs.io/en/latest/#using>`_ Theine
 -----------------------------------------------------------------------

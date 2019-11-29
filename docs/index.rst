@@ -34,9 +34,17 @@ Start up the theine server in the root of your Rails project:
 
 ``theine_server``
 
+or 
+
+``theine_start`` for a detached process
+
+Stopping the server (this only works if the server was started with ``theine_start``)
+
+``theine_stop``
+
 
 You can also add `–debug` mode so that the spawned workers will be running
-in debug mode:
+in debug mode (debug mode is ignored if silent is set to true):
 
 ``theine_server --debug``
 

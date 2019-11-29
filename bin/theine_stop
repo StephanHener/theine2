@@ -1,0 +1,10 @@
+#!/usr/bin/env ruby
+script = <<EOS
+#!/bin/bash
+echo "Stopping Theine Server..."
+kill -15 $(cat tmp/pids/theine_server.pid)
+rm tmp/pids/theine_server.pid
+EOS
+
+exec(script)
+

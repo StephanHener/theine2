@@ -1,0 +1,9 @@
+#!/usr/bin/env ruby
+script = <<EOS
+#!/bin/bash
+echo "Starting Theine Server in background mode..."
+theine_server &
+echo $! > tmp/pids/theine_server.pid
+EOS
+
+exec(script)

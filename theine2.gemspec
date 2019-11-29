@@ -12,6 +12,8 @@ Gem::Specification.new do |s|
   s.executables << 'theine_current_ruby'
   s.executables << 'theine_server'
   s.executables << 'theine_set_ruby'
+  s.executables << 'theine_start'
+  s.executables << 'theine_stop'
   s.homepage    = 'https://github.com/rwilliams/theine2'
   s.license     = 'MIT'
 end
