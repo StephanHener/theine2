@@ -26,7 +26,7 @@ module Theine
     def add_worker
       path = File.expand_path('../worker.rb', __FILE__)
       port = @workers_mutex.synchronize { @available_ports.shift }
-      puts "(spawn #{"#{port} #{debug}".strip})" if !config.silent
+      puts "(spawning worker #{"#{port} #{debug}".strip})" if !config.silent
       spawn("screen", "-d", "-m", "-S", worker_session_name(port),
         "sh", "-c",
         "jruby #{debug} #{path} #{config.base_port.to_s} #{port.to_s} #{config.rails_root}")
@@ -44,7 +44,7 @@ module Theine
     end
 
     def worker_boot(port)
-      puts "+ worker #{port}" if !config.silent
+      puts "(booting worker #{port})" if !config.silent
 
       @workers_mutex.synchronize do
         @spawning_workers.delete(port)
@@ -53,7 +53,7 @@ module Theine
     end
 
     def worker_done(port)
-      puts "- worker #{port}" if !config.silent
+      puts "(removing worker #{port})" if !config.silent
       @workers_mutex.synchronize do
         @workers_in_use.delete(port)
         @available_ports << port
@@ -104,7 +104,7 @@ module Theine
     end
   private
     def kill_worker(port)
-      print "- worker #{port}" if !config.silent
+      print "(stopping worker - #{port})" if !config.silent
       worker_pid = @worker_pids[port]
       worker_pid ||= DRbObject.new_with_uri("druby://localhost:#{port}").pid
       system("kill -9 #{worker_pid} > /dev/null 2>&1")
