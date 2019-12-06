@@ -1,12 +1,11 @@
 require 'yaml'
 
-# if Gem::Specification::find_by_name('pry')
-#   require 'pry'
-# end
-
-# if Gem::Specification::find_by_name('pry-nav')
-#   require 'pry-nav'
-# end
+if Gem::Specification::find_all_by_name('pry').any?
+  require 'pry'
+  if Gem::Specification::find_all_by_name('pry-nav').any?
+    require 'pry-nav'
+  end
+end
 
 module Theine
   class ConfigReader
